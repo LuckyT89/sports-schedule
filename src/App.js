@@ -29,8 +29,21 @@ function App() {
   }
 
 
-  function addGame() {
+  function addGame(game) {
     console.log('Add game button was clicked');
+    console.log(game);
+    
+    const config = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(game)
+    };
+
+    fetch('http://localhost:3000/games', config)
+      .then(res => res.json())
+      .then(game => setGames([...games, game]))
   }
   
 

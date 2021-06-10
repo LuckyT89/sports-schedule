@@ -20,9 +20,18 @@ function AdminForm({ addGame }) {
         setTime(e.target.value);
     }
 
-    function handleAddGame() {
+    function handleAddGame(e) {
+        e.preventDefault();
+        const game = {
+            homeTeam: homeTeam,
+            awayTeam: awayTeam,
+            date: date,
+            time: time,
+            isCanceled: false
+        };
+
         console.log(`The ${homeTeam} will play the ${awayTeam} on ${date} at ${time}!!!`);
-        addGame();
+        addGame(game);
     }
 
     return (
@@ -31,7 +40,7 @@ function AdminForm({ addGame }) {
             <input type='text' placeholder='Away Team' onChange={handleAwayChange} ></input><br />
             <input type='text' placeholder='Date' onChange={handleDateChange} ></input><br />
             <input type='text' placeholder='Time' onChange={handleTimeChange} ></input><br />
-            <button onClick={handleAddGame} >Add</button>
+            <button type='submit' onClick={handleAddGame} >Add</button>
         </div>
     );
 }
