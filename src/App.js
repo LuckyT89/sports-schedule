@@ -1,9 +1,7 @@
-import './App.css';
-import Admin from './components/Admin/Admin';
-import AdminCard from './components/AdminCard/AdminCard';
-import Home from './components/Home/Home';
-import HomeCard from './components/HomeCard/HomeCard';
 import Navbar from './components/Navbar/Navbar';
+import Admin from './components/Admin/Admin';
+import Home from './components/Home/Home';
+import './App.css';
 
 import { useState, useEffect } from 'react';
 
@@ -24,11 +22,9 @@ function App() {
 
   return (
     <div>
-      <Home />
-      <HomeCard />
-      <Admin />
-      <AdminCard />
       <Navbar />
+      <Home />
+      <Admin />
     </div>
   );
 }
