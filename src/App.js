@@ -8,11 +8,15 @@ import { useState, useEffect } from 'react';
 
 function App() {
 
+  const [games, setGames] = useState([]);
   
+  // Initial GET request to grab all the games and set state
   useEffect(() => {
-    fetch('http://localhost:3000/toys')
+    fetch('http://localhost:3000/games')
       .then(res => res.json())
-      .then(toys => console.log(toys))
+      .then(resGames => {
+        setGames(resGames);
+      })
   }, []);
 
 
