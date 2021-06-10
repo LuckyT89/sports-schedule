@@ -3,6 +3,7 @@ import Admin from './components/Admin/Admin';
 import AdminCard from './components/AdminCard/AdminCard';
 import Home from './components/Home/Home';
 import HomeCard from './components/HomeCard/HomeCard';
+import Navbar from './components/Navbar/Navbar';
 
 import { useState, useEffect } from 'react';
 
@@ -27,6 +28,7 @@ function App() {
       <HomeCard />
       <Admin />
       <AdminCard />
+      <Navbar />
     </div>
   );
 }
