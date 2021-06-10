@@ -2,7 +2,7 @@ import AdminCard from '../AdminCard/AdminCard';
 import AdminForm from '../AdminForm/AdminForm';
 import './Admin.css';
 
-function Admin({ games, removeGame }) {
+function Admin({ games, removeGame, addGame }) {
 
     // For every game that is returned, create an AdminCard component and pass in 
     // an individual game object as a prop along with the functions needed for AdminCards. 
@@ -14,7 +14,7 @@ function Admin({ games, removeGame }) {
     return (
         <div className='admin'>
             Admin component
-            <AdminForm />
+            <AdminForm addGame={addGame} />
             {adminCards}
         </div>
     );

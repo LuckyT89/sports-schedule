@@ -27,6 +27,11 @@ function App() {
       .then(res => res.json())
       .then(() => setGames(games.filter(game => game.id !== id)))
   }
+
+
+  function addGame() {
+    console.log('Add game button was clicked');
+  }
   
 
   return (
@@ -38,7 +43,7 @@ function App() {
         </Route>
 
         <Route exact path='/admin'>
-          <Admin games={games} removeGame={removeGame} />
+          <Admin games={games} removeGame={removeGame} addGame={addGame} />
         </Route>  
       </Switch>
     </div>
