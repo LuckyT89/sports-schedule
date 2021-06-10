@@ -1,4 +1,5 @@
 import AdminCard from '../AdminCard/AdminCard';
+import AdminForm from '../AdminForm/AdminForm';
 import './Admin.css';
 
 function Admin({ games, removeGame }) {
@@ -13,6 +14,7 @@ function Admin({ games, removeGame }) {
     return (
         <div className='admin'>
             Admin component
+            <AdminForm />
             {adminCards}
         </div>
     );
