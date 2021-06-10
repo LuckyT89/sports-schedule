@@ -19,8 +19,13 @@ function App() {
   }, []);
 
 
+  // Send DELETE request for a game matching the id, then update state to filter out 
+  // that game from the list that is displayed. 
   function removeGame(id) {
     console.log(`Remove game with id: ${id}`);
+    fetch(`http://localhost:3000/games/${id}`, {method: 'DELETE'})
+      .then(res => res.json())
+      .then(() => setGames(games.filter(game => game.id !== id)))
   }
   
 
