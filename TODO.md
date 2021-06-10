@@ -1,2 +1,3 @@
 -change title
 -add browser tab icon
+-make 404 page
