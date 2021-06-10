@@ -1,0 +1,2 @@
+-change title
+-add browser tab icon
