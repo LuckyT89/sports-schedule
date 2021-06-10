@@ -1,9 +1,11 @@
 import './HomeCard.css';
 
-function HomeCard() {
+function HomeCard({ homeTeam, awayTeam, date, time, isCanceled }) {
     return (
         <div className='home-card'>
-            HomeCard component
+            <p>{date}</p>
+            <p>{time}</p>
+            <p>{homeTeam} vs {awayTeam}</p>
         </div>
     );
 }

@@ -18,14 +18,14 @@ function App() {
       })
   }, []);
 
-
+  
 
   return (
     <div>
       <Navbar />
       <Switch>
         <Route exact path='/'>
-          <Home />
+          <Home games={games}/>
         </Route>
 
         <Route exact path='/admin'>
