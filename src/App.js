@@ -18,6 +18,10 @@ function App() {
       })
   }, []);
 
+
+  function removeGame(id) {
+    console.log(`Remove game with id: ${id}`);
+  }
   
 
   return (
@@ -29,7 +33,7 @@ function App() {
         </Route>
 
         <Route exact path='/admin'>
-          <Admin games={games} />
+          <Admin games={games} removeGame={removeGame} />
         </Route>  
       </Switch>
     </div>
