@@ -29,7 +29,7 @@ function App() {
         </Route>
 
         <Route exact path='/admin'>
-          <Admin />
+          <Admin games={games} />
         </Route>  
       </Switch>
     </div>

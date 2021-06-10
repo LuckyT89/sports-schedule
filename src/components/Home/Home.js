@@ -5,7 +5,7 @@ function Home({ games }) {
 
     // For every game that is returned, create a HomeCard component with the 
     // information for that game
-    const gameCards = games.map((game) => <HomeCard 
+    const homeCards = games.map((game) => <HomeCard 
         key={game.id} 
         homeTeam={game.homeTeam} 
         awayTeam={game.awayTeam} 
@@ -16,7 +16,7 @@ function Home({ games }) {
     return (
         <div className='home'>
             Home component
-            {gameCards}
+            {homeCards}
         </div>
     );
 }

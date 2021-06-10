@@ -1,9 +1,13 @@
 import './AdminCard.css';
 
-function AdminCard() {
+function AdminCard({ homeTeam, awayTeam, date, time, isCanceled }) {
     return (
         <div className='admin-card'>
-            AdminCard component
+            <p>{date}</p>
+            <p>{time}</p>
+            <p>{homeTeam} vs {awayTeam}</p>
+            <button>Delete</button>
+            <button>Canceled</button>
         </div>
     );
 }
