@@ -3,15 +3,9 @@ import './Home.css';
 
 function Home({ games }) {
 
-    // For every game that is returned, create a HomeCard component with the 
-    // information for that game
-    const homeCards = games.map((game) => <HomeCard 
-        key={game.id} 
-        homeTeam={game.homeTeam} 
-        awayTeam={game.awayTeam} 
-        date = {game.date} 
-        time = {game.time} 
-        isCanceled = {game.isCanceled} />);
+    // For every game that is returned, create a HomeCard component and pass in 
+    // an individual game object as a prop. 
+    const homeCards = games.map((game) => <HomeCard key={game.id} game={game} />);
 
     return (
         <div className='home'>

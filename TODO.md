@@ -1,3 +1,4 @@
 -change title
 -add browser tab icon
 -make 404 page
+-add ternanry in case there are no games
