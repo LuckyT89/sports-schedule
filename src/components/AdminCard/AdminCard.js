@@ -1,16 +1,16 @@
 import './AdminCard.css';
 
-function AdminCard({ id, homeTeam, awayTeam, date, time, isCanceled, removeGame }) {
+function AdminCard({ game, removeGame }) {
 
     function handleRemoveGame() {
-        removeGame(id);
+        removeGame(game.id);
     }
 
     return (
         <div className='admin-card'>
-            <p>{date}</p>
-            <p>{time}</p>
-            <p>{homeTeam} vs {awayTeam}</p>
+            <p>{game.date}</p>
+            <p>{game.time}</p>
+            <p>{game.homeTeam} vs {game.awayTeam}</p>
             <button onClick={handleRemoveGame} >Delete</button>
             <button>Canceled</button>
         </div>
