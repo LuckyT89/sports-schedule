@@ -11,6 +11,7 @@ function AdminForm({ addGame }) {
     // Update state when fields are changed
     function handleHomeChange(e) {
         setHomeTeam(e.target.value);
+        console.log(`Testing: ${e.target.value}`);
     }
     function handleAwayChange(e) {
         setAwayTeam(e.target.value);
@@ -39,7 +40,20 @@ function AdminForm({ addGame }) {
 
     return (
         <div className='admin-form'>
-            <input type='text' placeholder='Home Team' onChange={handleHomeChange} ></input><br />
+            {/* <input type='text' placeholder='Home Team' onChange={handleHomeChange} ></input><br /> */}
+
+            <select onChange={handleHomeChange} >
+                <option value='bears'>Bears</option>
+                <option value='bulls'>Bulls</option>
+                <option value='eagles'>Eagles</option>
+                <option value='panthers'>Panthers</option>
+                <option value='rhinos'>Rhinos</option>
+                <option value='sharks'>Sharks</option>
+                <option value='tigers'>Tigers</option>
+                <option value='wolves'>Wolves</option>
+            </select>
+
+            <br />
             <input type='text' placeholder='Away Team' onChange={handleAwayChange} ></input><br />
             <input type='text' placeholder='Date' onChange={handleDateChange} ></input><br />
             <input type='text' placeholder='Time' onChange={handleTimeChange} ></input><br />
