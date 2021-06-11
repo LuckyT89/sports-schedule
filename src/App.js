@@ -29,6 +29,9 @@ function App() {
   }
 
 
+  // Make a POST request to add a new game to the database. This takes a game object which was made from 
+  // the user input of the AdminForm component. After the request, the state is also updated to show this 
+  // new game added to the page. 
   function addGame(game) {
     console.log('Add game button was clicked');
     console.log(game);
@@ -47,6 +50,7 @@ function App() {
   }
   
 
+  
   return (
     <div>
       <Navbar />

@@ -2,11 +2,13 @@ import './AdminForm.css';
 import { useState } from 'react';
 
 function AdminForm({ addGame }) {
+    // Set starting state for form fields
     const [homeTeam, setHomeTeam] = useState('');
     const [awayTeam, setAwayTeam] = useState('');
     const [date, setDate] = useState('');
     const [time, setTime] = useState('');
 
+    // Update state when fields are changed
     function handleHomeChange(e) {
         setHomeTeam(e.target.value);
     }
@@ -20,6 +22,8 @@ function AdminForm({ addGame }) {
         setTime(e.target.value);
     }
 
+    // Create a game object from the field inputs when the Add button is clicked. Then pass this object 
+    // to the addGames function which is called from App. 
     function handleAddGame(e) {
         e.preventDefault();
         const game = {
@@ -30,7 +34,6 @@ function AdminForm({ addGame }) {
             isCanceled: false
         };
 
-        console.log(`The ${homeTeam} will play the ${awayTeam} on ${date} at ${time}!!!`);
         addGame(game);
     }
 
