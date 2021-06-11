@@ -7,3 +7,7 @@ div.admin-card {
 p.canceled {
     color: red;
 }
+
+div.admin-card img {
+    width: 100px;
+}
