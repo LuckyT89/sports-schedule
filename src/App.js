@@ -48,9 +48,27 @@ function App() {
       .then(res => res.json())
       .then(game => setGames([...games, game]))
   }
+
+
+  // Cancel game checkbox functionality
+  function cancelGame(updatedGame) {
+    const config = {
+      method: 'PATCH',
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(updatedGame)
+    }
+
+    fetch(`http://localhost:3000/games/${updatedGame.id}`, config)
+      .then(res => res.json())
+      .then((newGame) => {
+        console.log(newGame);
+      })
+  }
   
 
-  
+
   return (
     <div>
       <Navbar />
@@ -60,7 +78,7 @@ function App() {
         </Route>
 
         <Route exact path='/admin'>
-          <Admin games={games} removeGame={removeGame} addGame={addGame} />
+          <Admin games={games} removeGame={removeGame} cancelGame={cancelGame} addGame={addGame} />
         </Route>  
       </Switch>
     </div>
