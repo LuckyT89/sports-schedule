@@ -50,7 +50,8 @@ function App() {
   }
 
 
-  // Cancel game checkbox functionality
+  // Make a PATCH request to toggle if a game is canceled or not, also update state 
+  // to display the change
   function cancelGame(updatedGame) {
     const config = {
       method: 'PATCH',
@@ -64,6 +65,19 @@ function App() {
       .then(res => res.json())
       .then((newGame) => {
         console.log(newGame);
+
+        // Create a new variable with a list of all games, updating the one that just 
+        // had the cancel status toggled. 
+        const updatedGames = games.map((game) => {
+          if (game.id === newGame.id) {
+            return newGame;
+          }
+          else {
+            return game;
+          }
+        });
+
+        setGames(updatedGames);
       })
   }
   
