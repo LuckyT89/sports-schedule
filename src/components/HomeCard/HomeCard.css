@@ -7,3 +7,7 @@ div.home-card {
 p.canceled {
     color: red;
 }
+
+div.home-card img {
+    width: 100px;
+}

@@ -1,4 +1,5 @@
 import './HomeCard.css';
+import bears from '../../img/bulls.jpg';
 
 function HomeCard({ game }) {
     return (
@@ -7,6 +8,7 @@ function HomeCard({ game }) {
             <p>{game.date}</p>
             <p>{game.time}</p>
             <p>{game.homeTeam} vs {game.awayTeam}</p>
+            <img src={bears} alt='logo' />
         </div>
     );
 }
