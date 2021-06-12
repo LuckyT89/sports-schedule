@@ -13,7 +13,7 @@ function Admin({ games, removeGame, cancelGame, addGame }) {
         cancelGame={cancelGame} />);
 
     return (
-        <div className='admin'>
+        <div className='admin bg-dark'>
             <AdminForm addGame={addGame} />
             {adminCards}
         </div>

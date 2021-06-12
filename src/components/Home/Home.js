@@ -8,7 +8,7 @@ function Home({ games }) {
     const homeCards = games.map((game) => <HomeCard key={game.id} game={game} />);
 
     return (
-        <div className='home'>
+        <div className='home p-3 bg-dark'>
             {homeCards}
         </div>
     );
