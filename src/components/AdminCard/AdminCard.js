@@ -36,8 +36,39 @@ function AdminCard({ game, removeGame, cancelGame }) {
     }
 
 
-    const selectedHomeTeam = sharks;
+    let selectedHomeTeam;
+    
+    switch (game.homeTeam) {
+        case 'bears':
+            selectedHomeTeam = bears;
+            break;
+        case 'bulls':
+            selectedHomeTeam = bulls;
+            break;
+        case 'eagles':
+            selectedHomeTeam = eagles;
+            break;
+        case 'panthers':
+            selectedHomeTeam = panthers;
+            break;
+        case 'rhinos':
+            selectedHomeTeam = rhinos;
+            break;
+        case 'sharks':
+            selectedHomeTeam = sharks;
+            break;
+        case 'tigers':
+            selectedHomeTeam = tigers;
+            break;
+        case 'wolves':
+            selectedHomeTeam = wolves;
+            break;
+        default:
+            console.log('not set to anything');
+    }
 
+
+    console.log(game.homeTeam);
 
     return (
         <div className='admin-card'>
