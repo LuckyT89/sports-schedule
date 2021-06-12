@@ -22,7 +22,6 @@ function App() {
   // Send DELETE request for a game matching the id, then update state to filter out 
   // that game from the list that is displayed. 
   function removeGame(id) {
-    console.log(`Remove game with id: ${id}`);
     fetch(`http://localhost:3000/games/${id}`, {method: 'DELETE'})
       .then(res => res.json())
       .then(() => setGames(games.filter(game => game.id !== id)))
@@ -33,9 +32,7 @@ function App() {
   // the user input of the AdminForm component. After the request, the state is also updated to show this 
   // new game added to the page. 
   function addGame(game) {
-    console.log('Add game button was clicked');
-    console.log(game);
-    
+
     const config = {
       method: "POST",
       headers: {
@@ -64,8 +61,6 @@ function App() {
     fetch(`http://localhost:3000/games/${updatedGame.id}`, config)
       .then(res => res.json())
       .then((newGame) => {
-        console.log(newGame);
-
         // Create a new variable with a list of all games, updating the one that just 
         // had the cancel status toggled. 
         const updatedGames = games.map((game) => {

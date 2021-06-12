@@ -40,7 +40,6 @@ function AdminForm({ addGame }) {
 
     return (
         <div className='admin-form'>
-            {/* <input type='text' placeholder='Home Team' onChange={handleHomeChange} ></input><br /> */}
 
             <select onChange={handleHomeChange} >
                 <option value='bears'>Bears</option>
@@ -54,8 +53,6 @@ function AdminForm({ addGame }) {
             </select>
 
             <br />
-
-            {/* <input type='text' placeholder='Away Team' onChange={handleAwayChange} ></input><br /> */}
 
             <select onChange={handleAwayChange} >
                 <option value='bears'>Bears</option>
@@ -72,6 +69,7 @@ function AdminForm({ addGame }) {
 
             <input type='text' placeholder='Date' onChange={handleDateChange} ></input><br />
             <input type='text' placeholder='Time' onChange={handleTimeChange} ></input><br />
+            
             <button type='submit' onClick={handleAddGame} >Add</button>
         </div>
     );
