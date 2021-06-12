@@ -77,11 +77,13 @@ function HomeCard({ game }) {
 
 
     return (
-        <div className='home-card'>
-            <p className='canceled'>{game.isCanceled ? 'This game has been canceled!' : '' }</p>
-            <p>{game.date}</p>
-            <p>{game.time}</p>
-            <p><img src={selectedHomeTeam} alt='logo' /> vs. <img src={selectedAwayTeam} alt='logo' /></p>
+        <div className='home-card card mx-auto'>
+            <div className='card-body text-center'>
+                <p className='canceled'>{game.isCanceled ? 'This game has been canceled!' : '' }</p>
+                <h5 className='card-title'>{game.date}</h5>
+                <h6 className='card-subtitle mb-2 text-muted'>{game.time}</h6>
+                <p><img src={selectedHomeTeam} alt='logo' /> vs. <img src={selectedAwayTeam} alt='logo' /></p>
+            </div>
         </div>
     );
 }
