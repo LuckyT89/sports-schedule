@@ -2,3 +2,4 @@
 -add browser tab icon
 -add ternanry in case there are no games
 -make 404 page
+-add credit link to artist

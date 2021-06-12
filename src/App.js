@@ -6,12 +6,13 @@ import { useState, useEffect } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 function App() {
+  const baseURL = 'http://localhost:3000';
 
   const [games, setGames] = useState([]);
   
   // Initial GET request to grab all the games and set state
   useEffect(() => {
-    fetch('http://localhost:3000/games')
+    fetch(`${baseURL}/games`)
       .then(res => res.json())
       .then(resGames => {
         setGames(resGames);
@@ -22,7 +23,7 @@ function App() {
   // Send DELETE request for a game matching the id, then update state to filter out 
   // that game from the list that is displayed. 
   function removeGame(id) {
-    fetch(`http://localhost:3000/games/${id}`, {method: 'DELETE'})
+    fetch(`${baseURL}/games/${id}`, {method: 'DELETE'})
       .then(res => res.json())
       .then(() => setGames(games.filter(game => game.id !== id)))
   }
@@ -41,7 +42,7 @@ function App() {
       body: JSON.stringify(game)
     };
 
-    fetch('http://localhost:3000/games', config)
+    fetch(`${baseURL}/games`, config)
       .then(res => res.json())
       .then(game => setGames([...games, game]))
   }
@@ -58,7 +59,7 @@ function App() {
       body: JSON.stringify(updatedGame)
     }
 
-    fetch(`http://localhost:3000/games/${updatedGame.id}`, config)
+    fetch(`${baseURL}/games/${updatedGame.id}`, config)
       .then(res => res.json())
       .then((newGame) => {
         // Create a new variable with a list of all games, updating the one that just 
