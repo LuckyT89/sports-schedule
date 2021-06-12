@@ -54,7 +54,22 @@ function AdminForm({ addGame }) {
             </select>
 
             <br />
-            <input type='text' placeholder='Away Team' onChange={handleAwayChange} ></input><br />
+
+            {/* <input type='text' placeholder='Away Team' onChange={handleAwayChange} ></input><br /> */}
+
+            <select onChange={handleAwayChange} >
+                <option value='bears'>Bears</option>
+                <option value='bulls'>Bulls</option>
+                <option value='eagles'>Eagles</option>
+                <option value='panthers'>Panthers</option>
+                <option value='rhinos'>Rhinos</option>
+                <option value='sharks'>Sharks</option>
+                <option value='tigers'>Tigers</option>
+                <option value='wolves'>Wolves</option>
+            </select>
+
+            <br />
+
             <input type='text' placeholder='Date' onChange={handleDateChange} ></input><br />
             <input type='text' placeholder='Time' onChange={handleTimeChange} ></input><br />
             <button type='submit' onClick={handleAddGame} >Add</button>
