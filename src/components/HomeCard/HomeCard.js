@@ -8,14 +8,81 @@ import sharks from '../../img/sharks.jpg';
 import tigers from '../../img/tigers.jpg';
 import wolves from '../../img/wolves.jpg';
 
+
 function HomeCard({ game }) {
+
+    // Assign a variable the correct logo image based on who the home team is. SelectedHomeTeam will be used 
+    // as the src attribute in the image tag. 
+    let selectedHomeTeam;
+    switch (game.homeTeam) {
+        case 'bears':
+            selectedHomeTeam = bears;
+            break;
+        case 'bulls':
+            selectedHomeTeam = bulls;
+            break;
+        case 'eagles':
+            selectedHomeTeam = eagles;
+            break;
+        case 'panthers':
+            selectedHomeTeam = panthers;
+            break;
+        case 'rhinos':
+            selectedHomeTeam = rhinos;
+            break;
+        case 'sharks':
+            selectedHomeTeam = sharks;
+            break;
+        case 'tigers':
+            selectedHomeTeam = tigers;
+            break;
+        case 'wolves':
+            selectedHomeTeam = wolves;
+            break;
+        default:
+            console.log('not set to anything');
+    }
+
+    // Assign a variable the correct logo image based on who the away team is. SelectedAwayTeam will be used 
+    // as the src attribute in the image tag. 
+    let selectedAwayTeam;
+    switch (game.awayTeam) {
+        case 'bears':
+            selectedAwayTeam = bears;
+            break;
+        case 'bulls':
+            selectedAwayTeam = bulls;
+            break;
+        case 'eagles':
+            selectedAwayTeam = eagles;
+            break;
+        case 'panthers':
+            selectedAwayTeam = panthers;
+            break;
+        case 'rhinos':
+            selectedAwayTeam = rhinos;
+            break;
+        case 'sharks':
+            selectedAwayTeam = sharks;
+            break;
+        case 'tigers':
+            selectedAwayTeam = tigers;
+            break;
+        case 'wolves':
+            selectedAwayTeam = wolves;
+            break;
+        default:
+            console.log('not set to anything');
+    }
+
+
     return (
         <div className='home-card'>
             <p className='canceled'>{game.isCanceled ? 'This game has been canceled!' : '' }</p>
             <p>{game.date}</p>
             <p>{game.time}</p>
             <p>{game.homeTeam} vs {game.awayTeam}</p>
-            <p><img src={tigers} alt='logo' /> Vs. <img src={wolves} alt='logo' /></p>
+            <p><img src={selectedHomeTeam} alt='logo' /> Vs. <img src={selectedAwayTeam} alt='logo' /></p>
         </div>
     );
 }
