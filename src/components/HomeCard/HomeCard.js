@@ -40,7 +40,7 @@ function HomeCard({ game }) {
             selectedHomeTeam = wolves;
             break;
         default:
-            console.log('not set to anything');
+            console.log('Home team does not match anything');
     }
 
     // Assign a variable the correct logo image based on who the away team is. SelectedAwayTeam will be used 
@@ -72,7 +72,7 @@ function HomeCard({ game }) {
             selectedAwayTeam = wolves;
             break;
         default:
-            console.log('not set to anything');
+            console.log('Away team does not match anything');
     }
 
 
@@ -81,8 +81,7 @@ function HomeCard({ game }) {
             <p className='canceled'>{game.isCanceled ? 'This game has been canceled!' : '' }</p>
             <p>{game.date}</p>
             <p>{game.time}</p>
-            <p>{game.homeTeam} vs {game.awayTeam}</p>
-            <p><img src={selectedHomeTeam} alt='logo' /> Vs. <img src={selectedAwayTeam} alt='logo' /></p>
+            <p><img src={selectedHomeTeam} alt='logo' /> vs. <img src={selectedAwayTeam} alt='logo' /></p>
         </div>
     );
 }

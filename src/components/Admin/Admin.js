@@ -14,7 +14,6 @@ function Admin({ games, removeGame, cancelGame, addGame }) {
 
     return (
         <div className='admin'>
-            Admin component
             <AdminForm addGame={addGame} />
             {adminCards}
         </div>

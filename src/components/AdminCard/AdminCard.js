@@ -105,11 +105,9 @@ function AdminCard({ game, removeGame, cancelGame }) {
         <div className='admin-card'>
             <p>{game.date}</p>
             <p>{game.time}</p>
-            <p>{game.homeTeam} vs {game.awayTeam}</p>
-            <p><img src={selectedHomeTeam} alt='logo' /> Vs. <img src={selectedAwayTeam} alt='logo' /></p>
+            <p><img src={selectedHomeTeam} alt='logo' /> vs. <img src={selectedAwayTeam} alt='logo' /></p>
             <button onClick={handleRemoveGame} >Remove</button>
             <label>Mark canceled<input type='checkbox' checked={cancelStatus ? 'checked' : ''} onChange={handleCanceled} ></input></label>
-            <p className='canceled'>This game is {game.isCanceled ? "canceled" : "NOT canceled"} </p>
         </div>
     );
 }

@@ -9,7 +9,6 @@ function Home({ games }) {
 
     return (
         <div className='home'>
-            Home component
             {homeCards}
         </div>
     );
