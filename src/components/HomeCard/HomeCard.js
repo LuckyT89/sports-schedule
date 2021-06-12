@@ -77,7 +77,7 @@ function HomeCard({ game }) {
 
 
     return (
-        <div className='home-card card mx-auto'>
+        <div className='home-card card m-4 mx-auto'>
             <div className='card-body text-center'>
                 <p className='canceled'>{game.isCanceled ? 'This game has been canceled!' : '' }</p>
                 <h5 className='card-title'>{game.date}</h5>
