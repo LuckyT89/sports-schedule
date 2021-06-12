@@ -102,7 +102,7 @@ function AdminCard({ game, removeGame, cancelGame }) {
 
 
     return (
-        <div className='admin-card card mx-auto'>
+        <div className='admin-card card m-4 mx-auto'>
             <div className='card-body text-center'>
                 <h5 className='card-title'>{game.date}</h5>
                 <h6 className='card-subtitle mb-2 text-muted'>{game.time}</h6>
