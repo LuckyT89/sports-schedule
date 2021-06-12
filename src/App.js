@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 function App() {
-  const baseURL = 'http://localhost:3000';
+  const baseURL = 'https://sports-schedule-backend.herokuapp.com';
 
   const [games, setGames] = useState([]);
   
