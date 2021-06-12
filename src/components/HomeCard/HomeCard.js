@@ -9,6 +9,7 @@ import tigers from '../../img/tigers.jpg';
 import wolves from '../../img/wolves.jpg';
 
 
+
 function HomeCard({ game }) {
 
     // Assign a variable the correct logo image based on who the home team is. SelectedHomeTeam will be used 
