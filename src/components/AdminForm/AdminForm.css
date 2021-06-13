@@ -1,0 +1,8 @@
+form.admin-form {
+    width: 600px;
+}
+
+div.align-div {
+    /* border: 1px solid lime; */
+    display: inline-block;
+}

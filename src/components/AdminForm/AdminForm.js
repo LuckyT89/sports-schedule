@@ -39,39 +39,45 @@ function AdminForm({ addGame }) {
     }
 
     return (
-        <div className='admin-form'>
-
-            <select onChange={handleHomeChange} >
-                <option value='bears'>Bears</option>
-                <option value='bulls'>Bulls</option>
-                <option value='eagles'>Eagles</option>
-                <option value='panthers'>Panthers</option>
-                <option value='rhinos'>Rhinos</option>
-                <option value='sharks'>Sharks</option>
-                <option value='tigers'>Tigers</option>
-                <option value='wolves'>Wolves</option>
-            </select>
-
-            <br />
-
-            <select onChange={handleAwayChange} >
-                <option value='bears'>Bears</option>
-                <option value='bulls'>Bulls</option>
-                <option value='eagles'>Eagles</option>
-                <option value='panthers'>Panthers</option>
-                <option value='rhinos'>Rhinos</option>
-                <option value='sharks'>Sharks</option>
-                <option value='tigers'>Tigers</option>
-                <option value='wolves'>Wolves</option>
-            </select>
-
-            <br />
-
-            <input type='text' placeholder='Date' onChange={handleDateChange} ></input><br />
-            <input type='text' placeholder='Time' onChange={handleTimeChange} ></input><br />
+        <form className='admin-form bg-light p-3 mx-auto text-center'>
+            <p className='h1' >Add Game</p>
             
-            <button type='submit' onClick={handleAddGame} >Add</button>
-        </div>
+            <div className='align-div mx-auto text-start'>
+
+
+                <select className='mb-3 mt-4' onChange={handleHomeChange} >
+                    <option value='bears'>Bears</option>
+                    <option value='bulls'>Bulls</option>
+                    <option value='eagles'>Eagles</option>
+                    <option value='panthers'>Panthers</option>
+                    <option value='rhinos'>Rhinos</option>
+                    <option value='sharks'>Sharks</option>
+                    <option value='tigers'>Tigers</option>
+                    <option value='wolves'>Wolves</option>
+                </select>
+
+                <span className="mx-2">vs.</span>
+
+                <select onChange={handleAwayChange} >
+                    <option value='bears'>Bears</option>
+                    <option value='bulls'>Bulls</option>
+                    <option value='eagles'>Eagles</option>
+                    <option value='panthers'>Panthers</option>
+                    <option value='rhinos'>Rhinos</option>
+                    <option value='sharks'>Sharks</option>
+                    <option value='tigers'>Tigers</option>
+                    <option value='wolves'>Wolves</option>
+                </select>
+
+                <br />
+
+                <input className='mb-3' type='text' placeholder='Date' onChange={handleDateChange} ></input><br />
+                <input className='mb-3' type='text' placeholder='Time' onChange={handleTimeChange} ></input><br />
+                
+                <button className='btn btn-primary mb-3' type='submit' onClick={handleAddGame} >Add</button>
+
+            </div>
+        </form>
     );
 }
 
