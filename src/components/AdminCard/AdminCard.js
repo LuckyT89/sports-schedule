@@ -107,8 +107,17 @@ function AdminCard({ game, removeGame, cancelGame }) {
                 <h5 className='card-title'>{game.date}</h5>
                 <h6 className='card-subtitle mb-2 text-muted'>{game.time}</h6>
                 <p><img src={selectedHomeTeam} alt='logo' /> vs. <img src={selectedAwayTeam} alt='logo' /></p>
-                <button onClick={handleRemoveGame} >Remove</button>
-                <label>Mark canceled<input type='checkbox' checked={cancelStatus ? 'checked' : ''} onChange={handleCanceled} ></input></label>
+                <button className='btn btn-danger me-5' onClick={handleRemoveGame} >Remove</button>
+
+                {/* <label>Mark canceled<input className='form-check-input' type='checkbox' checked={cancelStatus ? 'checked' : ''} onChange={handleCanceled} ></input></label> */}
+
+                
+                <span className='text-muted'>Canceled</span>
+                <label className="switch ms-1">
+                    <input type="checkbox" checked={cancelStatus ? 'checked' : ''} onChange={handleCanceled}/>
+                    <span className="slider round"></span>
+                </label>
+                
             </div>
         </div>
     );
