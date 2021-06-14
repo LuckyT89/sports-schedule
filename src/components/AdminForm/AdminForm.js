@@ -39,8 +39,8 @@ function AdminForm({ addGame }) {
     }
 
     return (
-        <form className='admin-form bg-light p-3 mx-auto text-center'>
-            <p className='h1' >Add Game</p>
+        <form className='admin-form bg-light  text-center'>
+            <p className='h1 pt-3' >Add Game</p>
             
             <div className='align-div mx-auto text-start'>
 
