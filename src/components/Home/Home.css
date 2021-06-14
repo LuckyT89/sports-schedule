@@ -1,3 +1,8 @@
 div.home {
-    
+    text-align: center;
+}
+
+div.home a {
+    color: white;
+    display: inline-block;
 }
