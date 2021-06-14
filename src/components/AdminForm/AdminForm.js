@@ -36,6 +36,12 @@ function AdminForm({ addGame }) {
         };
 
         addGame(game);
+
+        // Clear date and time inputs after the Add button is clicked and set the state back to an empty string
+        document.getElementById('date-input').value = '';
+        document.getElementById('time-input').value = '';
+        setDate('');
+        setTime('');
     }
 
     return (
@@ -71,8 +77,8 @@ function AdminForm({ addGame }) {
 
                 <br />
 
-                <input className='mb-3' type='text' placeholder='Date' onChange={handleDateChange} ></input><br />
-                <input className='mb-3' type='text' placeholder='Time' onChange={handleTimeChange} ></input><br />
+                <input id='date-input' className='mb-3' type='text' placeholder='Date' required onChange={handleDateChange} ></input><br />
+                <input id='time-input' className='mb-3' type='text' placeholder='Time' required onChange={handleTimeChange} ></input><br />
                 
                 <button className='btn btn-primary mb-3' type='submit' onClick={handleAddGame} >Add</button>
 
