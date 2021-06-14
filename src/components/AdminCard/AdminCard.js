@@ -19,7 +19,7 @@ function AdminCard({ game, removeGame, cancelGame }) {
     }
 
     function handleCanceled() {
-        
+
         const updatedGame = {
             id: game.id,
             homeTeam: game.homeTeam,
