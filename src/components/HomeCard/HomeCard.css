@@ -1,8 +1,8 @@
 div.home-card {
     width: 400px;
 }
-p.canceled {
-    color: red;
+h6.canceled {
+    color: #dc3545;
 }
 
 div.home-card img {

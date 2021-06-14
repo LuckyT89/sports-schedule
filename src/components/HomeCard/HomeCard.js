@@ -1,4 +1,5 @@
 import './HomeCard.css';
+import { ExclamationTriangle } from 'react-bootstrap-icons';
 import bears from '../../img/bears.jpg';
 import bulls from '../../img/bulls.jpg';
 import eagles from '../../img/eagles.jpg';
@@ -80,7 +81,7 @@ function HomeCard({ game }) {
     return (
         <div className='home-card card m-5 mx-auto'>
             <div className='card-body text-center'>
-                <p className='canceled'>{game.isCanceled ? 'This game has been canceled!' : '' }</p>
+                <h6 className='canceled'>{game.isCanceled ? <span><ExclamationTriangle size={20}/> This game has been canceled <ExclamationTriangle size={20}/> </span> : '' }</h6>
                 <h5 className='card-title'>{game.date}</h5>
                 <h6 className='card-subtitle mb-2 text-muted'>{game.time}</h6>
                 <p><img src={selectedHomeTeam} alt='logo' /> vs. <img src={selectedAwayTeam} alt='logo' /></p>

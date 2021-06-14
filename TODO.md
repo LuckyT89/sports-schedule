@@ -1,5 +1,4 @@
 -add exlamation triangle icon
--add styling to show active page
 -add credit link to artist
 -add ternanry in case there are no games
 -make 404 page

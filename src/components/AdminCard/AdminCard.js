@@ -19,7 +19,6 @@ function AdminCard({ game, removeGame, cancelGame }) {
     }
 
     function handleCanceled() {
-        console.log(`This game is oringinally: ${cancelStatus}`);
         
         const updatedGame = {
             id: game.id,
