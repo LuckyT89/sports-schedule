@@ -3,8 +3,8 @@ import { useState } from 'react';
 
 function AdminForm({ addGame }) {
     // Set starting state for form fields
-    const [homeTeam, setHomeTeam] = useState('');
-    const [awayTeam, setAwayTeam] = useState('');
+    const [homeTeam, setHomeTeam] = useState('bears');
+    const [awayTeam, setAwayTeam] = useState('bulls');
     const [date, setDate] = useState('');
     const [time, setTime] = useState('');
 
@@ -59,8 +59,8 @@ function AdminForm({ addGame }) {
                 <span className="mx-2">vs.</span>
 
                 <select onChange={handleAwayChange} >
-                    <option value='bears'>Bears</option>
                     <option value='bulls'>Bulls</option>
+                    <option value='bears'>Bears</option>
                     <option value='eagles'>Eagles</option>
                     <option value='panthers'>Panthers</option>
                     <option value='rhinos'>Rhinos</option>

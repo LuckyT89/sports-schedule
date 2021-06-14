@@ -1,5 +1,5 @@
 
--try making form full width
+
 -set state for dropdowns
 -columns/rows for cards
 -team logo sizes
