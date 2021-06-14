@@ -9,6 +9,15 @@ div.admin-card img {
     width: 150px;
 }
 
+@media only screen and (max-width: 600px) {
+  div.admin-card {
+      width: 100%;
+  }
+  div.admin-card img {
+      width: 100px;
+  }
+}
+
 
 
 

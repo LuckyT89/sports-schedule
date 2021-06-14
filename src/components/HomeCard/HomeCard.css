@@ -1,10 +1,20 @@
 div.home-card {
     width: 400px;
 }
+
 h6.canceled {
     color: #dc3545;
 }
 
 div.home-card img {
     width: 150px;
+}
+
+@media only screen and (max-width: 600px) {
+    div.home-card {
+        width: 100%;
+    }
+    div.home-card img {
+        width: 100px;
+    }
 }
