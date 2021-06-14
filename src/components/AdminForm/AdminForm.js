@@ -11,7 +11,6 @@ function AdminForm({ addGame }) {
     // Update state when fields are changed
     function handleHomeChange(e) {
         setHomeTeam(e.target.value);
-        console.log(`Testing: ${e.target.value}`);
     }
     function handleAwayChange(e) {
         setAwayTeam(e.target.value);
@@ -49,7 +48,6 @@ function AdminForm({ addGame }) {
             <p className='h1 pt-3' >Add Game</p>
             
             <div className='align-div mx-auto text-start'>
-
 
                 <select className='mb-3 mt-4' onChange={handleHomeChange} >
                     <option value='bears'>Bears</option>

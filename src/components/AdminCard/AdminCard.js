@@ -35,7 +35,7 @@ function AdminCard({ game, removeGame, cancelGame }) {
     }
 
 
-    // Assign a variable the correct logo image based on who the home team is. SelectedHomeTeam will be used 
+    // Assign a variable the correct logo image based on who the home team is. selectedHomeTeam will be used 
     // as the src attribute in the image tag. 
     let selectedHomeTeam;
     switch (game.homeTeam) {
@@ -67,7 +67,7 @@ function AdminCard({ game, removeGame, cancelGame }) {
             console.log('not set to anything');
     }
 
-    // Assign a variable the correct logo image based on who the away team is. SelectedAwayTeam will be used 
+    // Assign a variable the correct logo image based on who the away team is. selectedAwayTeam will be used 
     // as the src attribute in the image tag. 
     let selectedAwayTeam;
     switch (game.awayTeam) {
@@ -105,18 +105,16 @@ function AdminCard({ game, removeGame, cancelGame }) {
             <div className='card-body text-center'>
                 <h5 className='card-title'>{game.date}</h5>
                 <h6 className='card-subtitle mb-2 text-muted'>{game.time}</h6>
+
                 <p><img src={selectedHomeTeam} alt='logo' /> vs. <img src={selectedAwayTeam} alt='logo' /></p>
+
                 <button className='btn btn-danger me-5' onClick={handleRemoveGame} >Remove</button>
-
-                {/* <label>Mark canceled<input className='form-check-input' type='checkbox' checked={cancelStatus ? 'checked' : ''} onChange={handleCanceled} ></input></label> */}
-
                 
                 <span className='text-muted'>Canceled</span>
                 <label className="switch ms-1">
                     <input type="checkbox" checked={cancelStatus ? 'checked' : ''} onChange={handleCanceled}/>
                     <span className="slider round"></span>
                 </label>
-                
             </div>
         </div>
     );

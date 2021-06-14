@@ -13,7 +13,7 @@ import wolves from '../../img/wolves.jpg';
 
 function HomeCard({ game }) {
 
-    // Assign a variable the correct logo image based on who the home team is. SelectedHomeTeam will be used 
+    // Assign a variable the correct logo image based on who the home team is. selectedHomeTeam will be used 
     // as the src attribute in the image tag. 
     let selectedHomeTeam;
     switch (game.homeTeam) {
@@ -45,7 +45,7 @@ function HomeCard({ game }) {
             console.log('Home team does not match anything');
     }
 
-    // Assign a variable the correct logo image based on who the away team is. SelectedAwayTeam will be used 
+    // Assign a variable the correct logo image based on who the away team is. selectedAwayTeam will be used 
     // as the src attribute in the image tag. 
     let selectedAwayTeam;
     switch (game.awayTeam) {

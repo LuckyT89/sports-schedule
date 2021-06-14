@@ -4,5 +4,7 @@ form.admin-form {
 
 div.align-div {
     /* border: 1px solid lime; */
+
+    /* inline-block will make this div take up the width of the content inside it */
     display: inline-block;
 }
