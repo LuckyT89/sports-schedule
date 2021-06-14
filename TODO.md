@@ -1,6 +1,5 @@
 -add exlamation triangle icon
--change title
--add browser tab icon
+-add styling to show active page
 -add credit link to artist
 -add ternanry in case there are no games
 -make 404 page
